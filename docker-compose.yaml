@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+    image: php:apache
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8080:80
+    container_name: sysdeva_php
