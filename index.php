@@ -125,7 +125,7 @@ if (!$row){
                     <?php
                     //班のプルダウンメニューを生成
                     //POSTされてきた班番号があった場合はそれを選択済みにする
-                    for ($i = 1; $i <= 14; $i++){
+                    for ($i = 1; $i <= $group_max; $i++){
                         echo '<option value="';
                         echo $i;
                         if ($i == $groupnum){
