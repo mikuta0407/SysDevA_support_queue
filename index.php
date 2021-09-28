@@ -1,4 +1,5 @@
 <?php
+require('function.php'); //デバッグモード関連とDB読み込み
 $auth = false; //認証を利用する場合はここを書き換える!!!
 
 switch ($auth) {
@@ -13,7 +14,7 @@ switch ($auth) {
 header('Content-Type: text/html; charset=utf-8');
 
 /* 定数系 */
-$group_max = 14;
+$group_max = 8;
 $question_max = 3;
 
 ?>
@@ -35,7 +36,6 @@ $question_max = 3;
     <br><b>更新はページ内の更新ボタンを利用してください</b></p>
 
 <?php
-require('function.php'); //デバッグモード関連とDB読み込み
 
 /* POSTされてきたときの処理 */
 if (isset($_POST['groupnum']) && isset($_POST['question'])){

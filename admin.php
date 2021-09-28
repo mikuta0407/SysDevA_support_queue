@@ -1,4 +1,5 @@
 <?php
+require('function.php'); //デバッグモード関連とDB読み込み
 $auth = false; //認証を利用する場合はここを書き換える!!!
 
 switch ($auth) {
@@ -28,8 +29,6 @@ header('Content-Type: text/html; charset=utf-8');
     <br><b>更新はページ内の更新ボタンを利用してください</b></p>
 
 <?php
-require('function.php'); //デバッグモード関連とDB読み込み
-
 /* POSTされてきたときの処理 */
 debug($_POST['id']);
 
